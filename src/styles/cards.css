@@ -1,0 +1,115 @@
+.containerLinks {
+    max-width: 980px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.containerLinks a {
+    width: 230px;
+    height: 200px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #0271a863;
+    padding: 10px;
+    text-decoration: none;
+    margin: 0 5px 0 5px;
+}
+
+.containerLinks a:hover {
+    width: 235px;
+    height: 210px;
+    box-shadow:  0 0 20px 6px #fff;
+    transition: 500ms;
+}
+
+.containerLinks a > span {
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+    color: #fff;
+}
+
+.containerLinks a > div {
+    height: 180px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLinks a > div > img {
+    width: 80px;
+}
+
+@media(max-width: 980px) {
+    .containerLinks {
+        max-width: 850px;
+    }
+    .containerLinks > a {
+        max-width: 850px;
+        width: 100%;
+        width: 180px;
+        height: 150px;
+    }
+    .containerLinks a > span {
+        font-size: 1rem;
+    }
+
+    .containerLinks a > div > img {
+        width: 60px;
+    }
+}
+
+@media (max-width: 850px) {
+    .containerLinks {
+        max-width: 540px;
+        display: grid;
+        margin-top: 40px;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 10px;
+    }
+    .containerLinks > a {
+        max-width: 540px;
+        width: 100%;
+        width: 180px;
+        height: 150px;
+    }
+    .containerLinks a:hover {
+        width: 185px;
+        height: 155px;
+    }
+}
+
+@media(max-width: 540px) {
+    .containerLinks {
+        max-width: 360px;
+        display: grid;
+        margin-top: 20px;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+    .containerLinks > a {
+        max-width: 360px;
+        width: 100%;
+        width: 145px;
+        height: 145px;
+    }
+    .containerLinks a:hover {
+        width: 145px;
+        height: 145px;
+    }
+    .containerLinks a > span {
+        font-size: 0.8rem;
+    }
+
+    .containerLinks a > div > img {
+        width: 40px;
+    }
+}

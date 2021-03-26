@@ -1,0 +1,60 @@
+<?php
+session_start();
+if(!$_SESSION['usuario']) {
+    header('Location: ../../login.php');
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/inserirManual.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <title>Novo Produto</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            
+        </header>
+        
+        <div class="section">
+            <form action="#" method="post">
+                <div id="title">
+                    <h2>Informe os dados abaixo:</h2>
+                </div>
+                <div class="containerForm">
+                    <div class="content1">
+                        <div class="ref">
+                            <label for="ref">Referencia:</label>
+                            <input type="text" name="ref" id="ref">
+                        </div>
+                        <div class="marca">
+                            <label for="marca">Marca:</label>
+                            <input type="text" name="marca" id="marca">
+                        </div>
+                    </div>
+
+                    <div class="content2">
+                        <div class="descricao">
+                            <label for="descricao">Descrição:</label>
+                            <textarea name="descricao" id="descricao" cols="10" rows="3"></textarea>
+                        </div>
+                        <div class="qntd-estoque">
+                            <label for="qntd">Quantidade de produtos (Unidade):</label>
+                            <input type="number" name="qntd" id="qntd">
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="btn1">Incluir</button>
+                <button id="btn2" formaction="../../index.html">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!--<?php
+session_start();
+if(!$_SESSION['usuario']) {
+    header('Location: login.php');
+}
+?> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="stylesheet" href="src/styles/cards.css">
+    <title>Inicio | Estoque Barba</title>
+</head>
+<body>
+    <div class="container">
+        <div id="dados">
+            <span>Bem Vindo, Fernando Henrique</span>
+            <a href="src/scripts/logout.php">Sair</a>
+        </div>
+        
+            <div class="main">
+                <h2>ESTOQUE CD PR 2020</h2>
+                <!--CARDS-->
+                <div class="containerLinks">
+                    <a href="src/pages/estoque.html" id="imgEstoque">
+                        <div>
+                            <img src="public/icons/estoque.png" alt='Estoque'/>
+                        </div>
+                        <span>Estoque</span>
+                    </a>
+                    <a href="src/pages/novoProduto.html">
+                        <div>
+                            <img src="public/icons/add.svg" alt="Novo-Produto"/>
+                        </div>
+                        <span>Entrada Produto</span>
+                    </a>
+                    <a href="#" disabled>
+                        <div>
+                            <img src="public/icons/lupa.png" alt="Consultar Produtos"/>
+                        </div>
+                        <span>Consultar Produtos</span>
+                    </a>
+                    <a href="#" disabled>
+                        <div>
+                            <img src="public/icons/report.svg" alt="Relatório"/>
+                        </div>
+                        <span>Relatório</span>
+                    </a>
+                </div>
+            </div>
+        
+
+    </div>
+</body>
+</html>

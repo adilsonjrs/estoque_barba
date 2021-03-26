@@ -1,0 +1,143 @@
+<?php
+session_start();
+if(!$_SESSION['usuario']) {
+    header('Location: ../../login.php');
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/estoque.css">
+    <title>Estoque</title>
+</head>
+<body>
+    <div class="containers">
+        <header class="header">
+            <div id="dados">
+                <span>Fernando Henrique</span>
+                <a href="src/scripts/logout.php">Sair</a>
+            </div>
+        </header>
+        <section>
+            <div class="info">
+                <h2>Estoque Geral</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>REF</th>
+                        <th>MARCA</th>
+                        <th>DESCRIÇÃO DO PRODUTO</th>
+                        <th>QNTD ESTOQUE</th>
+                        <th>AÇÃO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>4P1BAL001
+                        </td>
+                        <td>4POR1
+    
+                        </td>
+                        <td>BALM PARA BARBA 4POR1 55G
+    
+                        </td>
+                        <td>211
+    
+                        </td>
+                        <td>
+                            <button id="btnEdit">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>4P1HID001
+
+                        </td>
+                        <td>4POR1
+
+    
+                        </td>
+                        <td>HIDRATANTE E PROTETOR PARA TATUAGEM 4POR1 60G
+
+    
+                        </td>
+                        <td>-4
+    
+                        </td>
+                        <td>
+                            <button id="btnEdit">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4P1BAL001
+                        </td>
+                        <td>4POR1
+    
+                        </td>
+                        <td>BALM PARA BARBA 4POR1 55G
+    
+                        </td>
+                        <td>211
+    
+                        </td>
+                        <td>
+                            <button id="btnEdit">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>4P1BAL001
+                        </td>
+                        <td>4POR1
+    
+                        </td>
+                        <td>BALM PARA BARBA 4POR1 55G
+    
+                        </td>
+                        <td>211
+    
+                        </td>
+                        <td>
+                            <button id="btnEdit">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>4P1BAL001
+                        </td>
+                        <td>4POR1
+    
+                        </td>
+                        <td>BALM PARA BARBA 4POR1 55G
+    
+                        </td>
+                        <td>211
+    
+                        </td>
+                        <td>
+                            <button id="btnEdit">Editar</button>
+                        </td>
+                    </tr>
+                </tbody>
+                
+                
+            </table>
+        </section>
+        <div id="btn">
+            <button href="novoProduto.html" id="btn1" formaction="novoProduto.php">Novo produto</button>
+            <button id="btn2" formaction="novoProduto.php">Voltar</button>
+        </div>
+
+    </div>
+</body>
+</html>

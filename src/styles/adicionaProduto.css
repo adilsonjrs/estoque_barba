@@ -1,0 +1,203 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f2f3f5;
+}
+
+.header {
+    background: #039be5;
+    height: 190px;
+}
+
+#dados {
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    background: #039be5;
+    padding: 10px 0 0 0;
+    align-items: center;
+}
+
+#dados > span {
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+    margin-right: 20px;
+    padding: 5px;
+    color: #fff;
+}
+
+#dados > a {
+    background: #e83f5b;
+    color: #fff;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+#dados > a:hover {
+    background: #aa2d42;
+    transition: 200ms;
+}
+
+.section {
+    max-width: 980px;
+    width: 100%;
+    height: 500px;
+    margin: -70px auto 0px;
+    border: 1px solid #fff;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.568);
+}
+
+.info {
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #b4b5b8;
+}
+
+
+.info > h2 {
+    font-size: 1.8rem;
+    font-weight: 350;
+    font-family: 'Poppins';
+}
+
+.itens {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.itens > a {
+    width: 250px;
+    height: 250px;
+    border-radius: 2px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #039be5;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.section a:hover {
+    width: 260px;
+    height: 260px;
+    box-shadow:  0 0 20px 6px #02abffa8;
+    transition: 500ms;
+}
+
+.itens > a > span {
+    font-size: 1.1rem;
+}
+
+#img1 {
+    width: 90px;
+}
+
+#img2 {
+    width: 80px;
+}
+
+.section > a > span {
+    font-size: 1.1rem;
+}
+
+#btn {
+    max-width: 980px;
+    width: 100%;
+    margin: 50px auto 0;
+}
+
+button {
+    max-width: 980px;
+    width: 100%;
+    height: 50px;
+    width: 250px;
+    background: #e83f5b;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #aa2d42;
+    transition: 300ms;
+}
+
+@media(max-width: 980px) {
+    #dados {
+        max-width: 850px;
+        width: 90%;
+    }
+    #dados > span {
+        font-size: 1rem;
+        padding: 4px;
+    }
+    #dados > a {
+        font-size: 1rem;
+    }
+    .section {
+        max-width: 850px;
+        width: 90%;
+    }
+    .itens > a {
+        width: 200px;
+        height: 200px;
+    }
+    .itens a:hover {
+        width: 210px;
+        height: 210px;
+        box-shadow:  0 0 20px 6px #02abffa8;
+        transition: 500ms;
+    }
+
+    #img1 {
+        width: 80px;
+    }
+    #img2 {
+        width: 70px;
+    }
+    .itens > a > span{
+        font-size: 1rem;
+    }
+    #btn {
+        max-width: 850px;
+        width: 90%;
+    }
+    button {
+        max-width: 850px;
+    }
+}
+
+@media(max-width: 700px) {
+    button {
+        width: 100%;
+    }
+}

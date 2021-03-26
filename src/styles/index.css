@@ -1,0 +1,130 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #039be5;
+}
+
+#dados {
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    background: #039be5;
+    padding: 10px;
+    align-items: center;
+}
+
+#dados > span {
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+    margin-right: 20px;
+    padding: 5px;
+    color: #fff;
+}
+
+#dados > a {
+    background: #e83f5b;
+    color: #fff;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+#dados > a:hover {
+    background: #aa2d42;
+    transition: 200ms;
+}
+
+
+.main {
+    height: 100vh;
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: #039be5;
+}
+
+.main h2 {
+    margin-top: 50px;
+    font-size: 3.5rem;
+    font-family: 'Poppins';
+    font-weight: 300;
+    color: #fff;
+    padding: 10px;
+}
+
+.sair {
+    font-size: 200px;
+    font-family: 'Poppins';
+    outline-style: none;
+}
+
+@media(max-width: 980px) {
+    #dados {
+        max-width: 850px;
+    }
+    #dados > span {
+        font-size: 1rem;
+        padding: 4px;
+    }
+    #dados > a {
+        font-size: 1rem;
+    }
+    .main {
+        max-width: 850px;
+    }
+    .main > h2 {
+        margin-top: 40px;
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 850px) {
+    #dados {
+        max-width: 540px;
+        justify-content: space-between;
+    }
+    .main {
+        max-width: 540px;
+        align-items: center;
+    }
+
+    .main > h2 {
+        font-size: 2rem;
+    }
+} 
+
+@media(max-width: 540px) {
+    #dados {
+        max-width: 360px;
+    }
+    #dados > span {
+        font-size: 0.8rem;
+    }
+    #dados > a {
+        font-size: 0.8rem;
+    }
+    .main {
+        max-width: 360px;
+    }
+    .main > h2 {
+        font-size: 1.6rem;
+    }
+}
