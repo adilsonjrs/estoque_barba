@@ -5,6 +5,12 @@
     font-family: 'Poppins';
 }
 
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background: #f2f3f5;
+}
+
 .container {
     height: 100vh;
     display: flex;
@@ -197,7 +203,59 @@ button:hover {
 }
 
 @media(max-width: 700px) {
+    .section{
+        max-width: 520px;
+    }
+    .itens{
+        max-width: 520px;
+    }
+    .itens a {
+        width: 170px;
+        height: 170px;
+    }
+    #img1 {
+        width: 60px;
+    }
+    #img2 {
+        width: 55px;
+    }
+    .itens > a > span {
+        font-size: .8rem;
+    }
     button {
         width: 100%;
+        font-size: 1rem;
+    }
+    .itens a:hover {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media(max-width: 520px) {
+    #dados {
+        max-width: 390px;
+    }
+    .section {
+        max-width: 390px;
+    }
+    .itens{
+        max-width: 390px;
+    }
+    .itens a {
+        width: 130px;
+        height: 130px;
+    }
+    #img1 {
+        width: 40px;
+    }
+    #img2 {
+        width: 50px;
+    }
+    .itens > a > span {
+        font-size: .8rem;
+    }
+    #btn {
+        max-width: 390px;
     }
 }

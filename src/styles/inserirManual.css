@@ -5,6 +5,12 @@
     font-family: 'Poppins';
 }
 
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background: #f2f3f5;
+}
+
 .container {
     height: 100vh;
     display: flex;
@@ -175,12 +181,17 @@ button {
 }
 
 @media(max-width: 720px) {
+    #dados > span{
+        font-size: 0.5rem;
+    }
+    #dados > a {
+        font-size: .8rem;
+    }
     .section {
         max-width: 520px;
         width: 90%;
         height: 350px;
     }
-
     #btn1 {
         width: 100%;
         margin: 30px auto 0;
