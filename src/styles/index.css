@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100vh;
+    background: #039be5;
+}
 .container {
     height: 100vh;
     display: flex;
