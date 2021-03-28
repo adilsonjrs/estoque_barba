@@ -21,8 +21,46 @@ html, body {
 .header {
     height: 190px;
     background: #039be5;
-    display: flex;
     align-items: center;
+}
+
+#dados {
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    background: #039be5;
+    padding-top: 10px;
+    align-items: center;
+}
+
+#dados > span {
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+    margin-right: 20px;
+    padding: 5px;
+    color: #fff;
+}
+
+#dados > a {
+    background: #e83f5b;
+    color: #fff;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+#dados > a:hover {
+    background: #aa2d42;
+    transition: 200ms;
 }
 
 .section {
@@ -181,11 +219,15 @@ button {
 }
 
 @media(max-width: 720px) {
+    #dados {
+        max-width: 520px;
+        width: 90%;
+    }
     #dados > span{
-        font-size: 0.5rem;
+        font-size: .9rem;
     }
     #dados > a {
-        font-size: .8rem;
+        font-size: .9rem;
     }
     .section {
         max-width: 520px;
@@ -212,6 +254,39 @@ button {
     }
     .containerForm {
         height: 300px;
+    }
+}
+
+@media(max-width: 520px) {
+    #title > h2 {
+        font-size: 1.5rem;
+    }
+    .ref > label {
+        font-size: .9rem;
+    }
+    .ref > input {
+        width: 150px;
+    }
+    .marca > label {
+        font-size: .9rem;
+    }
+    .marca > input {
+        width: 150px;
+    }
+    .descricao > label {
+        font-size: .9rem;
+    }
+    .descricao > textarea {
+        width: 150px;
+    }
+    .qntd-estoque > label {
+        font-size: .9rem;
+    } 
+    #btn1 {
+        font-size: .9rem;
+    }
+    #btn2 {
+        font-size: .9rem;
     }
 }
 
