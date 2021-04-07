@@ -14,12 +14,13 @@ if(!$_SESSION['usuario']) {
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/entradaProduto.css">
     <link rel="stylesheet" href="../styles/estoque.css">
-    <title>Inicio / Estoque</title>
+    <title>Entrada de Produtos</title>
 </head>
 <body>
-    <input type="checkbox" id="inputActive">
+<input type="checkbox" checked id="inputActive">
     <div class="sidebar">
         <div class="sidebar-marca">
             <h1>
@@ -31,23 +32,23 @@ if(!$_SESSION['usuario']) {
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href=""><span class="las la-home la-2x"></span>
+                    <a href="../../index.html"><span class="las la-home la-2x"></span>
                     <span>Inicio</span></a>
                 </li>
                 <li>
-                    <a href="src/pages/estoque.php"><span class="las la-archive la-2x"></span>
+                    <a href="../pages/estoque.html"><span class="las la-archive la-2x"></span>
                     <span>Estoque</span></a>
                 </li>
                 <li>
-                    <a href="#"><span class="las la-plus-circle la-2x"></span>
-                    <span>Entrada de Produtos</span></a>
+                    <a href="entradaProduto.html"><span class="las la-plus-circle la-2x"></span>
+                    <span>Entrada e Saída</span></a>
                 </li>
                 <li>
                     <a href=""><span class="las la-chalkboard la-2x"></span>
                     <span>Relatório</span></a>
                 </li>
                 <li>
-                    <a href="src/scripts/logout.php"><span class="las la-door-open la-2x"></span>
+                    <a href="../scripts/logout.php"><span class="las la-door-open la-2x"></span>
                     <span>Sair</span></a>
                 </li>
             </ul>
@@ -70,31 +71,16 @@ if(!$_SESSION['usuario']) {
             </div>
         </header>
 
-        <div class="container-cards">
-            <div class="cards">
-                <div class="total-estoque">
-                    <div class="total-estoque-itens">
-                        <span>3052</span>
-                        <span>Produtos em estoque</span>
-                    </div>
-                    <div class="icon-estoque">
-                        <i class="las la-boxes la-3x"></i>
-                    </div>
-                </div>
-                <div class="estoque-baixo">
-                    <div class="total-estoque-itens">
-                        <span>52</span>
-                        <span>Produtos com estoque baixo</span>
-                    </div>
-                    <div class="icon-estoque-alert">
-                        <i class="las la-exclamation-triangle la-3x"></i>
-                    </div>
-                    
-                </div>
+        <div class="opcaoEntrada">
+            <div class="entradaManual">
+                    <a href="EntradaManual.html"><i class="las la-keyboard"></i><span>Entrada Manual</span></a>
+            </div>
+            <div class="entradaBarras">
+                <a href=""><i class="las la-barcode"></i><span>Ler código de Barras</span></a>
+                
             </div>
         </div>
-
-
+        
     </div>
 </body>
 </html>

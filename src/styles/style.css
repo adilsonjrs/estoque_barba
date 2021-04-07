@@ -78,7 +78,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background: #f9f9f9;
-    height: 65px;
+    height: 4rem;
     padding: 0 10px;
     box-shadow: 2px 2px 5px rgb(0,0,0,0.2);
 }
@@ -204,24 +204,77 @@ body {
     .main-content header h1 label{
         font-size: 1.5rem;
     }
+    .container-cards{
+        max-width: 720px;
+        width: 100%;
+        margin: auto;
+    }
+    .cards{
+        max-width: 720px;
+        width: 100%;
+        margin: auto;
+        height: 80vh;
+        flex-direction: column;
+    }
+    .total-estoque{
+        height: 150px;
+    }
+    .estoque-baixo{
+        height: 150px;
+    }
+    .total-estoque-itens span:first-child{
+        font-size: 2rem;
+    }
  }
 
-
-
-
-
+ @media(max-width: 720px){
+    .sidebar{
+        width: 80px;
+        transition: 1ms;
+    }
+    .sidebar-marca h1 i{
+        font-size: 2rem;
+    }
+    .sidebar-marca h1 span{
+        display: none;
+    }
+    .sidebar ul li span{
+        font-size: 1.2rem;
+    }
+    .sidebar ul li span:last-child{
+        display: none;
+    }
+    .main-content header h1 label{
+        display: none;
+    }
+    
+}    
 
  @media(max-width: 610px){
     body{
         flex-direction: column;
     }
+    .contentSidebar{
+        width: 100%;
+        background: #235670;
+    }
     .sidebar{
+        height: 45px;
+        width: 100% !important;
+        max-width: 400px;
+        margin: auto;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+    }
+    .sidebar-marca{
+        padding: 5px 0;
     }
     .sidebar-marca h1{
         margin: 0;
+    }
+    .sidebar-marca h1 i{
+        margin-right: 0;
     }
     .sidebar-menu{
         margin: 0;
@@ -243,5 +296,14 @@ body {
     }
     .main-content header{
         display: none;
+    }
+    .total-estoque-itens span:first-child{
+        font-size: 1.5rem;
+    }
+    .container-cards{
+        max-width: 480px;
+    }
+    .cards{
+        max-width: 310px;
     }
  }

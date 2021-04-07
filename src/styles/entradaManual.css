@@ -1,0 +1,196 @@
+.infoHeader{
+    max-width: 980px;
+    width: 100%;
+    margin: 2rem auto 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0;
+    font-weight: 300;
+    color: #235670;
+}
+.infoHeader i{
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+.containerEntrada{
+    max-width: 980px;
+    width: 100%;
+    height: 500px;
+    margin: 15px auto 0;
+    box-shadow: 0 0 5px 0px #235670;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.containerSecao{
+    height: 350px;
+    display: flex;
+}
+.secao1{
+    width: 490px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+}
+.secao2{
+    width: 490px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+}
+input:focus,
+select:focus,
+option:focus{
+    outline: none;
+    box-shadow: 0 0 8px 0px #2a6583;
+}
+input, select{
+    border: 1px solid #dcdcdc;
+    height: 2.8rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+input, option, select{
+    padding: 0 10px;
+}
+.opcao{
+    height: 70px;
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.opcao div button{
+    height: 2.8rem;
+    width: 120px;
+    font-size: .9rem;
+    background: #2d6e8f;
+    color: #fff;
+    border-radius: 5px;
+}
+.opcao div button:hover{
+    cursor: pointer;
+    background: #235670;
+    transition: 300ms;
+}
+.opcao div:last-child button:first-child{
+    margin-right: 20px;
+}
+
+
+@media(max-width: 1360px){
+    .infoHeader{
+        max-width: 720px;
+    }
+    .containerEntrada{
+        max-width: 720px;
+    }
+}
+
+@media(max-width: 1050px){
+    .infoHeader{
+        max-width: 640px;
+    }
+    .containerEntrada{
+        max-width: 640px;
+    }
+    input, select{
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 980px){
+    .infoHeader{
+        max-width: 500px;
+    }
+    .containerEntrada{
+        max-width: 500px;
+    }
+    input, select{
+        font-size: .9rem;
+        margin-top: 15px;
+    }
+    .opcao div button{
+        font-size: .8rem;
+    }
+}
+
+@media(max-width: 780px){
+    .infoHeader{
+        max-width: 450px;
+    }
+    .containerEntrada{
+        max-width: 450px;
+    }
+}
+
+@media(max-width: 610px){
+    .infoHeader{
+        max-width: 400px;
+    }
+    .containerEntrada{
+        max-width: 400px;
+        height: 580px;
+        justify-content: flex-start;
+    }
+    .containerSecao{
+        display: block;
+    }
+    .secao1{
+        width: 100%;
+        padding-bottom: 0;
+    }
+    .secao2{
+        width: 100%;
+        padding-top: 0;
+    }
+    .opcao{
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    .opcao div button{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .opcao div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 460px){
+    .infoHeader{
+        max-width: 300px;
+    }
+    .containerEntrada{
+        max-width: 300px;
+    }
+    .infoHeader i{
+        font-size: 1.7rem;
+    }
+    .infoHeader h2{
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 320px){
+    .infoHeader{
+        max-width: 265px;
+    }
+    .containerEntrada{
+        max-width: 265px;
+    }
+    .infoHeader i{
+        font-size: 1.6rem;
+    }
+    .infoHeader h2{
+        font-size: 1.2rem;
+    }
+}

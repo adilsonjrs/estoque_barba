@@ -1,0 +1,111 @@
+<?php
+session_start();
+if(!$_SESSION['usuario']) {
+    header('Location: login.php');
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/entradaManual.css">
+    <title>Entrada Manual Estoque</title>
+</head>
+<body>
+    <!--SIDEBAR-->
+    <input type="checkbox" checked id="inputActive">
+
+    <div class="contentSidebar">
+        <div class="sidebar">
+            <div class="sidebar-marca">
+                <h1>
+                    <i class="lab la-atlassian la-2x"></i>
+                    <span>Stock</span>
+                </h1>
+            </div>
+    
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="index.html"><span class="las la-home la-2x"></span>
+                        <span>Inicio</span></a>
+                    </li>
+                    <li>
+                        <a href="src/pages/estoque.html"><span class="las la-archive la-2x"></span>
+                        <span>Estoque</span></a>
+                    </li>
+                    <li>
+                        <a href="src/pages/entradaProduto.html"><span class="las la-plus-circle la-2x"></span>
+                        <span>Entrada e Saída</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="las la-chalkboard la-2x"></span>
+                        <span>Relatório</span></a>
+                    </li>
+                    <li>
+                        <a href="src/scripts/logout.html"><span class="las la-door-open la-2x"></span>
+                        <span>Sair</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--HEADER-->
+    <div class="main-content">
+        <header>
+            <h1>
+                <label for="inputActive">
+                    <span class="las la-bars la-lg"></span>
+                </label>
+            </h1>
+            <div class="user">
+                <i class="lar la-user-circle la-2x"></i>
+                <div>
+                    <h4>Fernando H.</h4>
+                </div>
+                
+            </div>
+        </header>
+        <!--CONTENT MAIN-->
+        <div class="infoHeader">
+            <i class="las la-boxes"></i>
+            <h2>Entrada de Produtos</h2>
+        </div>
+        <div class="containerEntrada">
+            <div class="containerSecao">
+                <div class="secao1">
+                    <input type="text" id="codigo" placeholder="Código">
+                    <input type="text" id="marca" placeholder="Marca">
+                    <input type="text" id="detalhes" placeholder="Detalhes">
+                </div>
+                <div class="secao2">
+                    <input type="text" id="produto" placeholder="Produto">
+                    <input type="text" id="fornecedor" placeholder="Fornecedor Principal">
+                    <select id="operacaoFiscal">
+                        <option disabled selected value="">Operação Fiscal</option>
+                        <option value="1">Entrada de Fornecedor</option>
+                        <option value="2">Venda de Mercadorias</option>
+                    </select>
+                </div>
+            </div>
+            <div class="opcao">
+                <div>
+                    <button>Novo Produto</button>
+                </div>
+                <div>
+                    <button>Salvar</button>
+                    <button>Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
