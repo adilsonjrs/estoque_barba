@@ -15,7 +15,7 @@
 .containerEntrada{
     max-width: 980px;
     width: 100%;
-    height: 500px;
+    height: 70vh;
     margin: 15px auto 0;
     box-shadow: 0 0 5px 0px #235670;
     display: flex;

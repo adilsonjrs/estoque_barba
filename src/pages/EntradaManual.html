@@ -14,15 +14,13 @@ if(!$_SESSION['usuario']) {
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/entradaManual.css">
     <title>Entrada Manual Estoque</title>
 </head>
 <body>
     <!--SIDEBAR-->
     <input type="checkbox" checked id="inputActive">
-
-    <div class="contentSidebar">
         <div class="sidebar">
             <div class="sidebar-marca">
                 <h1>
@@ -34,15 +32,15 @@ if(!$_SESSION['usuario']) {
             <div class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="index.html"><span class="las la-home la-2x"></span>
+                        <a href="../../index.html"><span class="las la-home la-2x"></span>
                         <span>Inicio</span></a>
                     </li>
                     <li>
-                        <a href="src/pages/estoque.html"><span class="las la-archive la-2x"></span>
+                        <a href="estoque.html"><span class="las la-archive la-2x"></span>
                         <span>Estoque</span></a>
                     </li>
                     <li>
-                        <a href="src/pages/entradaProduto.html"><span class="las la-plus-circle la-2x"></span>
+                        <a href="entradaProduto.html"><span class="las la-plus-circle la-2x"></span>
                         <span>Entrada e Saída</span></a>
                     </li>
                     <li>
@@ -50,13 +48,12 @@ if(!$_SESSION['usuario']) {
                         <span>Relatório</span></a>
                     </li>
                     <li>
-                        <a href="src/scripts/logout.html"><span class="las la-door-open la-2x"></span>
+                        <a href="../scripts/logout.html"><span class="las la-door-open la-2x"></span>
                         <span>Sair</span></a>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
     <!--HEADER-->
     <div class="main-content">
         <header>

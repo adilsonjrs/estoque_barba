@@ -118,60 +118,7 @@ body {
     margin-left: -40px;
 }
 
-/* CARDS*/
-.container-cards{
-    max-width: 980px;
-    width: 100%;
-}
-.cards{
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.total-estoque{
-    height: 180px;
-    display: flex;
-    background: #fff;
-    border-radius: 4px;
-    padding: 10px 20px;
-    box-shadow: 0 0 10px 0px rgb(143, 222, 143);
-}
-.total-estoque-itens{
-    display: flex;
-    flex-direction: column;
-}
-.total-estoque-itens span:first-child{
-    margin-top: 35px;
-    font-size: 2.5rem;
-    font-weight: 500;
-}
-.total-estoque-itens span:last-child{
-    font-size: 1rem;
-    color: gray;
-}
-.icon-estoque{
-    margin-top: 44px;
-    margin-left: 50px;
-    color: #235670;
-}
-.estoque-baixo{
-    height: 180px;
-    display: flex;
-    background: #fff;
-    border-radius: 4px;
-    padding: 10px 20px;
-    box-shadow: 0 0 10px 0px rgb(201, 109, 109);
-}
-.icon-estoque-alert{
-    margin-top: 44px;
-    margin-left: 50px;
-    color: rgb(206, 37, 37);
-    
-}
- /*Responsividade*/
-
- @media(max-width: 1360px){
+@media(max-width: 1360px){
     #inputActive:checked + .sidebar h1 i{
         margin-left: 3px;
     }
@@ -204,42 +151,17 @@ body {
     .main-content header h1 label{
         font-size: 1.5rem;
     }
-    .container-cards{
-        max-width: 720px;
-        width: 100%;
-        margin: auto;
-    }
-    .cards{
-        max-width: 720px;
-        width: 100%;
-        margin: auto;
-        height: 80vh;
-        flex-direction: column;
-    }
-    .total-estoque{
-        height: 150px;
-    }
-    .estoque-baixo{
-        height: 150px;
-    }
-    .total-estoque-itens span:first-child{
-        font-size: 2rem;
-    }
- }
-
- @media(max-width: 720px){
+}
+@media(max-width: 720px){
     .sidebar{
         width: 80px;
         transition: 1ms;
     }
-    .sidebar-marca h1 i{
-        font-size: 2rem;
+    .sidebar-marca h1{
+        margin-left: 8px;
     }
     .sidebar-marca h1 span{
         display: none;
-    }
-    .sidebar ul li span{
-        font-size: 1.2rem;
     }
     .sidebar ul li span:last-child{
         display: none;
@@ -248,9 +170,8 @@ body {
         display: none;
     }
     
-}    
-
- @media(max-width: 610px){
+}   
+@media(max-width: 610px){
     body{
         flex-direction: column;
     }
@@ -260,8 +181,8 @@ body {
     }
     .sidebar{
         height: 45px;
-        width: 100% !important;
         max-width: 400px;
+        width: 100% !important;
         margin: auto;
         display: flex;
         align-items: center;
@@ -281,9 +202,7 @@ body {
         align-items: center;
     }
     .sidebar-menu ul{
-        width: 100%;
         display: flex;
-        margin: 0;
     }
     .sidebar ul li{
         display: flex;
@@ -297,13 +216,7 @@ body {
     .main-content header{
         display: none;
     }
-    .total-estoque-itens span:first-child{
-        font-size: 1.5rem;
+    .sidebar ul li{
+        height: 45px;
     }
-    .container-cards{
-        max-width: 480px;
-    }
-    .cards{
-        max-width: 310px;
-    }
- }
+} 
