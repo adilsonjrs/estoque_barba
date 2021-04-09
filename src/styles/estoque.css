@@ -81,7 +81,6 @@
         font-size: .7rem;
     }
 }
-
 @media(max-width: 980px){
     .produtos-estoque table{
         max-width: 640px;
@@ -92,27 +91,7 @@
         max-width: 640px;
     }
 }
-
 @media(max-width: 720px){
-    .sidebar{
-        width: 80px;
-        transition: 1ms;
-    }
-    .sidebar-marca h1 i{
-        font-size: 2rem;
-    }
-    .sidebar-marca h1 span{
-        display: none;
-    }
-    .sidebar ul li span{
-        font-size: 1.2rem;
-    }
-    .sidebar ul li span:last-child{
-        display: none;
-    }
-    .main-content header h1 label{
-        display: none;
-    }
     .produtos-estoque table{
         max-width: 520px;
         width: 100%;
@@ -147,15 +126,7 @@
         padding: 4px;
     }
 }
-
 @media(max-width: 610px){
-    .sidebar{
-        height: 45px;
-        width: 100%;
-    }
-    .sidebar-marca{
-        padding: 0 10px;
-    }
     .produtos-estoque table{
         max-width: 480px;
         width: 100%;
@@ -192,7 +163,6 @@
         font-size: .8rem;
     }
 }
-
 @media(max-width: 490px){
     .produtos-estoque table{
         max-width: 360px;
@@ -232,11 +202,7 @@
         font-size: .7rem;
     }
 }
-
 @media(max-width: 380px){
-    .sidebar-marca{
-        margin-left: 30px;
-    }
     .produtos-estoque table{
         max-width: 280px;
         width: 100%;
@@ -273,18 +239,5 @@
     }
     .pesquisa i{
         font-size: .7rem;
-    }
-    .sidebar-marca h1{
-        font-size: 1.4rem;
-    }
-    .sidebar ul li span{
-        font-size: 1rem;
-    }
-    .sidebar-menu ul{
-        margin: 0;
-        margin-right: 35px;
-    }
-    .sidebar ul li{
-        margin: -2px;
     }
 }

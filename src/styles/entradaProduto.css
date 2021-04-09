@@ -77,7 +77,6 @@
         max-width: 720px;
     }
 }
-
 @media(max-width: 980px){
     .opcaoEntrada{
         max-width: 640px;
@@ -97,7 +96,6 @@
         font-size: .9rem;
     }
 }
-
 @media(max-width: 640px){
     .opcaoEntrada{
         flex-direction: column;

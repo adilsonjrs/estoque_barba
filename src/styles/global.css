@@ -13,6 +13,12 @@ html, body{
 body {
     display: flex;
 }
+.contentSidebar{
+    height: 100vh;
+    width: 400px;
+    background: #235670;
+    transition: 300ms;
+}
 .sidebar {
     height: 100vh;
     width: 400px;
@@ -20,7 +26,7 @@ body {
     transition: 300ms;
 }
 .sidebar-marca {
-    padding: 5px 10px 10px;
+    padding: 5px 13px 10px;
 }
 .sidebar-marca h1 {
     display: flex;
@@ -31,7 +37,6 @@ body {
 .sidebar-marca h1 i{
     margin-right: 4px;
 }
-
 .sidebar-menu {
     margin-top: 30px;
 }
@@ -103,19 +108,14 @@ body {
 #inputActive {
     display: none;
 }
+#inputActive:checked + .contentSidebar, 
 #inputActive:checked + .sidebar{
     width: 80px;
     transition: 300ms;
 }
-#inputActive:checked + .sidebar h1 i{
-    margin-left: -10px;
-}
-#inputActive:checked + .sidebar .sidebar-marca h1 span,
-#inputActive:checked + .sidebar .sidebar-menu ul li a span:last-child{
+#inputActive:checked + .contentSidebar > .sidebar .sidebar-marca h1 span,
+#inputActive:checked + .contentSidebar > .sidebar .sidebar-menu ul li a span:last-child{
     display: none;
-}
-#inputActive:checked + .sidebar .sidebar-menu ul{
-    margin-left: -40px;
 }
 
 @media(max-width: 1360px){
@@ -160,8 +160,14 @@ body {
     .sidebar-marca h1{
         margin-left: 8px;
     }
+    .sidebar-marca h1 i{
+        font-size: 2rem;
+    }
     .sidebar-marca h1 span{
         display: none;
+    }
+    .sidebar ul li span{
+        font-size: 1.5rem;
     }
     .sidebar ul li span:last-child{
         display: none;
@@ -176,7 +182,8 @@ body {
         flex-direction: column;
     }
     .contentSidebar{
-        width: 100%;
+        height: 45px;
+        width: 100% !important;
         background: #235670;
     }
     .sidebar{
@@ -217,6 +224,40 @@ body {
         display: none;
     }
     .sidebar ul li{
-        height: 45px;
+        height: 44px;
     }
 } 
+@media(max-width: 430px){
+    .sidebar{
+        max-width: 350px;
+    }
+    .sidebar-marca{
+        margin-left: 10px;
+    }
+    .sidebar-marca h1{
+        font-size: 1.4rem;
+    }
+    .sidebar ul li span{
+        font-size: 1rem;
+    }
+    .sidebar ul li{
+        margin-top: 2px;
+    }
+    .container-cards{
+        max-width: 350px;
+    }
+}
+@media(max-width: 350px){
+    .sidebar{
+        max-width: 280px;
+    }
+    .sidebar-marca{
+        margin-left: 0;
+    }
+    .container-cards{
+        max-width: 280px;
+    }
+    .cards{
+        max-width: 250px;
+    }
+}
