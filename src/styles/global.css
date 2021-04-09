@@ -237,8 +237,11 @@ body {
     .sidebar-marca h1{
         font-size: 1.4rem;
     }
+    .sidebar-menu{
+        width: 230px;
+    }
     .sidebar ul li span{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .sidebar ul li{
         margin-top: 2px;
