@@ -27,32 +27,47 @@ if(!$_SESSION['usuario']) {
         <div class="sidebar">
             <div class="sidebar-marca">
                 <h1>
-                    <i class="lab la-atlassian la-2x"></i>
-                    <span>Stock</span>
+                    <i class="lab la-atlassian"></i>
+                    <span id="checked">Stock</span>
                 </h1>
             </div>
-
+    
             <div class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="../../index.html"><span class="las la-home la-2x"></span>
-                        <span>Inicio</span></a>
+                        <a href="../../index.html">
+                            <span class="las la-home"></span>
+                            <label>Inicio</label>
+                            <span id="checked">Inicio</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="estoque.html"><span class="las la-archive la-2x"></span>
-                        <span>Estoque</span></a>
+                        <a href="estoque.html">
+                            <span class="las la-archive"></span>
+                            <label>Estoque</label>
+                            <span id="checked">Estoque</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="entradaProduto.html"><span class="las la-plus-circle la-2x"></span>
-                        <span>Entrada e Saída</span></a>
+                        <a href="entradaProduto.html">
+                            <span class="las la-plus-circle"></span>
+                            <label>Entrada e Saída</label>
+                            <span id="checked">Entrada e Saída</span>
+                        </a>
                     </li>
                     <li>
-                        <a href=""><span class="las la-chalkboard la-2x"></span>
-                        <span>Relatório</span></a>
+                        <a href="" disable>
+                            <span class="las la-chalkboard"></span>
+                            <label>Relatório</label>
+                            <span id="checked">Relatório</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="../scripts/logout.php"><span class="las la-door-open la-2x"></span>
-                        <span>Sair</span></a>
+                        <a href="../scripts/logout.html">
+                            <span class="las la-door-open"></span>
+                            <label>Sair</label>
+                            <span id="checked">Sair</span>
+                        </a>
                     </li>
                 </ul>
             </div>
