@@ -1,27 +1,28 @@
 <?php
 session_start();
-if(!$_SESSION['usuario']) {
-    header('Location: login.php');
+if(!$_SESSION['user']) {
+    header('Location: ../../login.php');
 }
+
+include '../../db/select_db.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/entradaProduto.css">
     <link rel="stylesheet" href="../styles/estoque.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <title>Entrada de Produtos</title>
+    <title>Estoque</title>
 </head>
 <body>
-        <!--SIDEBAR-->
-    <input type="checkbox" checked id="inputActive">
+    <!--SIDEBAR-->
+    <input type="checkbox" id="inputActive">
     
     <div class="contentSidebar">
         <div class="sidebar">
@@ -35,21 +36,21 @@ if(!$_SESSION['usuario']) {
             <div class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="../../index.html">
+                        <a href="../../index.php">
                             <span class="las la-home"></span>
                             <label>Inicio</label>
                             <span id="checked">Inicio</span>
                         </a>
                     </li>
                     <li>
-                        <a href="estoque.html">
+                        <a href="estoque.php">
                             <span class="las la-archive"></span>
                             <label>Estoque</label>
                             <span id="checked">Estoque</span>
                         </a>
                     </li>
                     <li>
-                        <a href="entradaProduto.html">
+                        <a href="entradaProduto.php">
                             <span class="las la-plus-circle"></span>
                             <label>Entrada e Saída</label>
                             <span id="checked">Entrada e Saída</span>
@@ -63,7 +64,7 @@ if(!$_SESSION['usuario']) {
                         </a>
                     </li>
                     <li>
-                        <a href="../scripts/logout.html">
+                        <a href="../scripts/logout.php">
                             <span class="las la-door-open"></span>
                             <label>Sair</label>
                             <span id="checked">Sair</span>
@@ -84,22 +85,52 @@ if(!$_SESSION['usuario']) {
             <div class="user">
                 <i class="lar la-user-circle la-2x"></i>
                 <div>
-                    <h4>Fernando H.</h4>
+                    <h4><?= $_SESSION['user']?></h4>
                 </div>
                 
             </div>
         </header>
 
-        <div class="opcaoEntrada">
-            <div class="entradaManual">
-                    <a href="EntradaManual.html"><i class="las la-keyboard"></i><span>Entrada Manual</span></a>
-            </div>
-            <div class="entradaBarras">
-                <a href=""><i class="las la-barcode"></i><span>Ler código de Barras</span></a>
-                
+        <div class="container-estoque">
+            <div class="estoque-geral">
+                <div class="produtos-estoque">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>CÓDIGO</th>
+                                <th>MOV.</th>
+                                <th>DATA</th>
+                                <th>QUANTIDADE</th>
+                                <th>VALOR ENTRADA</th>
+                                <th>OPERAÇÃO FISCAL</th>
+                                <th>NF</th>
+                                <th>FORNECEDOR</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <?php foreach ($result as $registro): ?>
+                                <tr>
+                                    <td><?= $registro['id'] ?></td>
+                                    <td><?= $registro['codigo'] ?></td>
+                                    <td><?= $registro['tipoMovimentacao'] ?></td>
+                                    <td style="width: 7.5rem"><?= $registro['dataEntrada'] ?></td>
+                                    <td><?= $registro['quantidadeProdutos'] ?></td>
+                                    <td>R$<?= $registro['valorEntrada'] ?></td>
+                                    <td><?= $registro['operacaoFiscal'] ?></td>
+                                    <td><?= $registro['notaFiscal'] ?></td>
+                                    <td><?= $registro['fornecedor'] ?></td>
+                                </tr>
+                            <?php endforeach ?>
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        
+
     </div>
 </body>
 </html>

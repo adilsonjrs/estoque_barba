@@ -23,7 +23,6 @@ body {
     width: 300px;
 }
 .sidebar {
-    height: 100vh;
     width: 80px;
     background: #235670;
     transition: 300ms;
@@ -131,14 +130,14 @@ body {
 .main-content {
     height: 100vh;
     width: 100vw;
-    background: #fcfcfc;
+    background: #eeee;
 }
 
 .main-content header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #f9f9f9;
+    background: #fff;
     height: 4rem;
     padding: 0 10px;
     box-shadow: 2px 2px 5px rgb(0,0,0,0.2);
@@ -287,30 +286,24 @@ body {
     .sidebar-marca h1{
         font-size: 1.4rem;
     }
-    .sidebar-menu{
-        width: 230px;
-    }
     .sidebar ul li span{
         font-size: 1.2rem;
     }
     .sidebar ul li{
         margin-top: 2px;
     }
-    .container-cards{
-        max-width: 350px;
-    }
 }
 @media(max-width: 350px){
     .sidebar{
-        max-width: 280px;
+        max-width: 250px;
     }
     .sidebar-marca{
         margin-left: 0;
     }
+    .sidebar-menu ul{
+        margin-left: -8px;
+    }
     .container-cards{
         max-width: 280px;
-    }
-    .cards{
-        max-width: 250px;
     }
 }

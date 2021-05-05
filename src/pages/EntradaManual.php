@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!$_SESSION['usuario']) {
-    header('Location: login.php');
+if(!$_SESSION['user']) {
+    header('Location: ../../login.php');
 }
 ?>
 
@@ -20,7 +20,7 @@ if(!$_SESSION['usuario']) {
 </head>
 <body>
     <!--SIDEBAR-->
-    <input type="checkbox" checked id="inputActive">
+    <input type="checkbox" id="inputActive">
     
     <div class="contentSidebar">
         <div class="sidebar">
@@ -34,21 +34,21 @@ if(!$_SESSION['usuario']) {
             <div class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="../../index.html">
+                        <a href="../../index.php">
                             <span class="las la-home"></span>
                             <label>Inicio</label>
                             <span id="checked">Inicio</span>
                         </a>
                     </li>
                     <li>
-                        <a href="estoque.html">
+                        <a href="estoque.php">
                             <span class="las la-archive"></span>
                             <label>Estoque</label>
                             <span id="checked">Estoque</span>
                         </a>
                     </li>
                     <li>
-                        <a href="entradaProduto.html">
+                        <a href="entradaProduto.php">
                             <span class="las la-plus-circle"></span>
                             <label>Entrada e Saída</label>
                             <span id="checked">Entrada e Saída</span>
@@ -62,7 +62,7 @@ if(!$_SESSION['usuario']) {
                         </a>
                     </li>
                     <li>
-                        <a href="../scripts/logout.html">
+                        <a href="../scripts/logout.php">
                             <span class="las la-door-open"></span>
                             <label>Sair</label>
                             <span id="checked">Sair</span>
@@ -84,7 +84,7 @@ if(!$_SESSION['usuario']) {
             <div class="user">
                 <i class="lar la-user-circle la-2x"></i>
                 <div>
-                    <h4>Fernando H.</h4>
+                    <h4><?= $_SESSION['user']?></h4>
                 </div>
                 
             </div>
@@ -95,31 +95,54 @@ if(!$_SESSION['usuario']) {
             <h2>Entrada de Produtos</h2>
         </div>
         <div class="containerEntrada">
-            <div class="containerSecao">
-                <div class="secao1">
-                    <input type="text" id="codigo" placeholder="Código">
-                    <input type="text" id="marca" placeholder="Marca">
-                    <input type="text" id="detalhes" placeholder="Detalhes">
-                </div>
-                <div class="secao2">
-                    <input type="text" id="produto" placeholder="Produto">
-                    <input type="text" id="fornecedor" placeholder="Fornecedor Principal">
-                    <select id="operacaoFiscal">
-                        <option disabled selected value="">Operação Fiscal</option>
-                        <option value="1">Entrada de Fornecedor</option>
-                        <option value="2">Venda de Mercadorias</option>
-                    </select>
-                </div>
-            </div>
-            <div class="opcao">
-                <div>
-                    <button>Novo Produto</button>
-                </div>
-                <div>
-                    <button>Salvar</button>
-                    <button>Cancelar</button>
-                </div>
-            </div>
+                <form action="../../db/insert_db.php" method="post" class="containerSecao">
+                    <div>
+                        <div class="secao1">
+                            <div>
+                                <label for="codigo">Código</label>
+                                <input type="text" name="codigo" id="codigo" placeholder="Código">
+                            </div>
+                            <div>
+                                <label for="marca">Marca</label>
+                                <input type="text" name="marca" id="marca" placeholder="Marca">
+                            </div>
+                            <div>
+                                <label for="detalhes">Detalhes</label>
+                                <input type="text" name="detalhes" id="detalhes" placeholder="Detalhes">
+                            </div>
+                        </div>
+
+                        <div class="secao2">
+                            <div>
+                                <label for="produto">Produto</label>
+                                <input type="text" name="produto" id="produto" placeholder="Produto">
+                            </div>
+                            <div>
+                                <label for="fornecedor">Fornecedor</label>
+                                <input type="text" name="fornecedor" id="fornecedor" placeholder="Fornecedor Principal">
+                            </div>
+                            <div>
+                                <label for="operacaoFiscal">Operação Fiscal</label>
+                                <select name="operacaoFiscal" id="operacaoFiscal">
+                                    <option disabled selected value="">Operação Fiscal</option>
+                                    <option value="1">Entrada de Fornecedor</option>
+                                    <option value="2">Venda de Mercadorias</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="opcao">
+                        <div>
+                            <button formAction="EntradaManual.php">Novo Produto</button>
+                        </div>
+                        <div>
+                            <button type="submit">Salvar</button>
+                            <button formAction="../../index.php">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            
         </div>
     </div>
 

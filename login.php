@@ -1,8 +1,3 @@
-<?php
-session_start();
-include_once('src/scripts/login.php');
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,23 +13,23 @@ include_once('src/scripts/login.php');
     <title>Login</title>
 </head>
 <body>
-    <div id="iconLogin">
-        <i class="lab la-atlassian"></i>
-        <span>Stock</span>
-    </div>
-    <form action="#" method="post">
+    <form action="db/logar.php" method="post">
+        <div id="iconLogin">
+            <i class="lab la-atlassian"></i>
+            <span>Stock</span>
+        </div>
+        
         <div class="contLogin">
             <div class="contentLogin">
-                <label for="user">Usuário</label>
-                <input type="text" name="user" id="user">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha">
             </div>
             <div class="button">
-                <button>Acessar</button>
+                <button type="submit">Entrar</button>
             </div>
         </div>
-
     </form>
     
 </body>

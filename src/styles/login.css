@@ -4,45 +4,47 @@
     box-sizing: border-box;
     font-family: 'Poppins';
 }
-#iconLogin{
-    height: 250px;
-    background: #014466;
+
+body {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-}
-#iconLogin i{
-    font-size: 5rem;
-    color: #fff;
-    margin-bottom: 10px;
-    margin-right: 10px;
-}
-#iconLogin span{
-    font-size: 3rem;
-    color: #fff;
-    margin-bottom: 3px;
+    background: #014466;
+    height: 100vh;
 }
 
 form {
-    height: 100vh;
     background: #014466;
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
+#iconLogin i{
+    font-size: 4.5rem;
+    color: #fff;
+    margin-right: 0.625rem;
+}
+
+#iconLogin span{
+    font-size: 3rem;
+    color: #fff;
+}
+
+
 .contLogin {
-    width: 400px;
-    height: 350px;
+    width: 21.875rem;
+    height: 21.875rem;
     background: #fff;
-    border-radius: 3px;
-    padding: 30px;
-    box-shadow: 1px 1px 15px 2px #f2f3f5;
+    border-radius: 0.188rem;
+    padding: 1.875rem;
 }
 
 .contentLogin {
     display: flex;
     flex-direction: column;
-    height: 240px;
+    height: 14rem;
 }
 
 .contentLogin > label {
@@ -50,15 +52,16 @@ form {
     font-family: 'Poppins';
     font-weight: 500;
     color: #204F66;
-    margin-bottom: 5px;
+    margin-bottom: 0.313rem;
 }
 
 .contentLogin > input {
-    height: 50px;
+    height: 3.125rem;
     margin-bottom: 5px;
     border-radius: 5px;
     border: 1px solid #204F66;
-    font-size: 1.1rem;
+    font-size: .9rem;
+    padding-left: .8rem;
 }
 .button {
     display: flex;
@@ -67,13 +70,13 @@ form {
 
 .button > button {
     width: 100%;
-    height: 50px;
+    height: 3.125rem;
     background: #48B4EA;
     color: #FFF;
     font-size: 1rem;
     font-family: 'Poppins';
     transition: 400ms;
-    border-radius: 5px;
+    border-radius: 0.313rem;
 }
 
 .button > button:hover {

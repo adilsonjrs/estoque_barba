@@ -1,3 +1,8 @@
+.container-estoque {
+    max-height: calc(100vh - 10rem);
+    overflow-y: scroll;
+}
+
 .pesquisa{
     max-width: 980px;
     width: 100%;
@@ -26,16 +31,16 @@
     width: 100%;
     border-collapse: collapse;
     margin: 30px 0 0;
-    font-size: 1rem;
 }
 .produtos-estoque table thead tr{
-    height: 50px;
     background: #1D495E;
     color: #fff;
     text-align: left;
 }
-.produtos-estoque table td, th {
-    padding: 12px 15px;
+.produtos-estoque th {
+    padding: 10px 20px 10px 10px;
+}
+.produtos-estoque table th {
     font-weight: 400;
 }
 .produtos-estoque table tbody tr {
@@ -47,16 +52,9 @@
 .produtos-estoque table tbody tr:last-of-type {
     border-bottom: 2px solid #1D495E;
 }
-#btnEdit{
-    background: #1D495E;
-    color: #fff;
-    border-radius: 2px;
-    height: 30px;
-}
-#btnEdit:hover{
-    background: #163848;
-    cursor: pointer;
-    transition: 300ms;
+.produtos-estoque td{
+    font-size: .8rem;
+    padding-left: 10px;
 }
 
 

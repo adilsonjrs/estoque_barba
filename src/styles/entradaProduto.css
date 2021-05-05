@@ -105,11 +105,11 @@
         margin-top: 50px;
     }
     .entradaManual{
-        width: 360px;
+        width: 300px;
         height: 70px;
     }
     .entradaBarras{
-        width: 360px;
+        width: 300px;
         height: 70px;
     }
     .entradaManual a span{
@@ -123,6 +123,22 @@
     }
     .entradaBarras a i{
         margin-left: 50px;
+    }
+}
+@media(max-width: 350px){
+    .entradaManual{
+        width: 240px;
+        height: 70px;
+    }
+    .entradaBarras{
+        width: 240px;
+        height: 70px;
+    }
+    .entradaManual a i{
+        margin-left: 30px;
+    }
+    .entradaBarras a i{
+        margin-left: 30px;
     }
 }
 
