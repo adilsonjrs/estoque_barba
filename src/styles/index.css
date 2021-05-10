@@ -39,7 +39,6 @@
     display: flex;
     align-items: center;
     margin-left: 1rem;
-    color: #235670;
 }
 .estoque-baixo{
     height: 9rem;
@@ -52,7 +51,6 @@
     display: flex;
     align-items: center;
     margin-left: 1rem;
-    color: rgb(206, 37, 37); 
 }
 
 section {

@@ -1,8 +1,12 @@
 <?php
+//verifica se existe uma sessão, caso não tenha, redireciona para o login.php
 session_start();
 if(!$_SESSION['user']) {
     header('Location: login.php');
 }
+
+include 'db/select_db.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -97,7 +101,8 @@ if(!$_SESSION['user']) {
             <div class="cards">
                 <div class="total-estoque">
                     <div class="total-estoque-itens">
-                        <span>3052</span>
+                    
+                        <span> <?= $row2['quantidade'] ?> </span>
                         <span>Produtos em estoque</span>
                     </div>
                     <div class="icon-estoque">
@@ -114,41 +119,23 @@ if(!$_SESSION['user']) {
                         <i class="las la-exclamation-triangle la-3x"></i>
                     </div>
                 </div>
-                <div class="total-estoque">
-                    <div class="total-estoque-itens">
-                        <span>3052</span>
-                        <span>Produtos em estoque</span>
-                    </div>
-                    <div class="icon-estoque">
-                        <i class="las la-boxes la-3x"></i>
-                    </div>
-                </div>
 
                 <div class="estoque-baixo">
                     <div class="total-estoque-itens">
-                        <span>52</span>
-                        <span>Produtos com estoque baixo</span>
+                        <span>120</span>
+                        <span>Quantidade segura</span>
                     </div>
                     <div class="icon-estoque-alert">
-                        <i class="las la-exclamation-triangle la-3x"></i>
+                        <i class="las la-shield-alt la-3x"></i>
                     </div>
                 </div>
 
             </div>
+
+            <div></div>
+
         </div>
 
-        <!--SECTION-->
-    
-        <section>
-            <div class="contentInfo">
-                <div>
-                    <h2>oláa</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet eius dolor quod explicabo recusandae laudantium, aspernatur qui obcaecati esse ipsum adipisci officiis dignissimos rerum sunt at dolorum odit quasi id.</p>
-                </div>
-                <div></div>
-
-            </div>
-        </section>
 
     </div>
 

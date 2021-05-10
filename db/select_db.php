@@ -14,6 +14,14 @@ if($consulta->rowCount() > 0) {
     }
 }
 
+$sql2 = 'SELECT SUM(quantidadeProdutos) AS quantidade FROM entrada_produtos';
+
+$consulta2 = $conn->prepare($sql2);
+$consulta2->execute();
+
+$row2 = $consulta2->fetch(PDO::FETCH_ASSOC);
+
+
 
 $conn = null;
 

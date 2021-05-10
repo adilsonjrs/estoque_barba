@@ -1,4 +1,5 @@
 <?php
+//verifica se existe uma sessão, caso não tenha, redireciona para o login.php
 session_start();
 if(!$_SESSION['user']) {
     header('Location: ../../login.php');
@@ -110,7 +111,7 @@ include '../../db/select_db.php';
                         </thead>
 
                         <tbody>
-
+                            
                             <?php foreach ($result as $registro): ?>
                                 <tr>
                                     <td><?= $registro['id'] ?></td>
