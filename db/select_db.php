@@ -2,6 +2,8 @@
 
 include_once 'conexao_db.php';
 
+//Mostra todos os produtos do estoque
+
 $sql = 'SELECT * FROM entrada_produtos';
 
 $consulta = $conn->prepare($sql);
@@ -13,6 +15,8 @@ if($consulta->rowCount() > 0) {
         $result[] = $row;
     }
 }
+
+//Mostra a quantidade total de produtos
 
 $sql2 = 'SELECT SUM(quantidadeProdutos) AS quantidade FROM entrada_produtos';
 
