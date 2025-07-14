@@ -1,8 +1,47 @@
 <?php
 //verifica se existe uma sessão, caso não tenha, redireciona para o login.php
-session_start();
-if(!$_SESSION['user']) {
-    header('Location: ../../login.php');
+include '../../db/conexao_db.php';
+include '../../db/security.php';
+
+// Set security headers
+setSecurityHeaders();
+
+// Check if user session is valid
+if(!isValidSession()) {
+    session_destroy();
+    secureRedirect('../../login.php?error=session_expired');
+}
+
+// Generate CSRF token
+$csrf_token = generateCSRFToken();
+
+// Handle success/error messages
+$message = '';
+$message_type = '';
+if (isset($_GET['success'])) {
+    $message = 'Produto inserido com sucesso!';
+    $message_type = 'success';
+} elseif (isset($_GET['error'])) {
+    switch ($_GET['error']) {
+        case 'missing_fields':
+            $message = 'Preencha todos os campos obrigatórios.';
+            break;
+        case 'invalid_length':
+            $message = 'Um ou mais campos excedem o tamanho máximo permitido.';
+            break;
+        case 'invalid_operation':
+            $message = 'Operação fiscal inválida.';
+            break;
+        case 'insert_failed':
+            $message = 'Erro ao inserir produto. Tente novamente.';
+            break;
+        case 'system_error':
+            $message = 'Erro do sistema. Tente novamente mais tarde.';
+            break;
+        default:
+            $message = 'Erro desconhecido.';
+    }
+    $message_type = 'error';
 }
 ?>
 
@@ -95,36 +134,44 @@ if(!$_SESSION['user']) {
             <i class="las la-boxes"></i>
             <h2>Entrada de Produtos</h2>
         </div>
+        
+        <?php if ($message): ?>
+            <div class="message <?php echo $message_type; ?>" style="margin: 15px 0; padding: 10px; border-radius: 4px; <?php echo $message_type === 'success' ? 'background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;' : 'background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;'; ?>">
+                <?php echo htmlspecialchars($message); ?>
+            </div>
+        <?php endif; ?>
+        
         <div class="containerEntrada">
                 <form action="../../db/insert_db.php" method="post" class="containerSecao">
+                    <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrf_token); ?>">
                     <div>
                         <div class="secao1">
                             <div>
-                                <label for="codigo">Código</label>
-                                <input type="text" name="codigo" id="codigo" placeholder="Código">
+                                <label for="codigo">Código *</label>
+                                <input type="text" name="codigo" id="codigo" placeholder="Código" required maxlength="50">
                             </div>
                             <div>
-                                <label for="marca">Marca</label>
-                                <input type="text" name="marca" id="marca" placeholder="Marca">
+                                <label for="marca">Marca *</label>
+                                <input type="text" name="marca" id="marca" placeholder="Marca" required maxlength="100">
                             </div>
                             <div>
-                                <label for="detalhes">Detalhes</label>
-                                <input type="text" name="detalhes" id="detalhes" placeholder="Detalhes">
+                                <label for="detalhes">Detalhes *</label>
+                                <input type="text" name="detalhes" id="detalhes" placeholder="Detalhes" required maxlength="255">
                             </div>
                         </div>
 
                         <div class="secao2">
                             <div>
-                                <label for="produto">Produto</label>
-                                <input type="text" name="produto" id="produto" placeholder="Produto">
+                                <label for="produto">Produto *</label>
+                                <input type="text" name="produto" id="produto" placeholder="Produto" required maxlength="100">
                             </div>
                             <div>
-                                <label for="fornecedor">Fornecedor</label>
-                                <input type="text" name="fornecedor" id="fornecedor" placeholder="Fornecedor Principal">
+                                <label for="fornecedor">Fornecedor *</label>
+                                <input type="text" name="fornecedor" id="fornecedor" placeholder="Fornecedor Principal" required maxlength="100">
                             </div>
                             <div>
-                                <label for="operacaoFiscal">Operação Fiscal</label>
-                                <select name="operacaoFiscal" id="operacaoFiscal">
+                                <label for="operacaoFiscal">Operação Fiscal *</label>
+                                <select name="operacaoFiscal" id="operacaoFiscal" required>
                                     <option disabled selected value="">Operação Fiscal</option>
                                     <option value="1">Entrada de Fornecedor</option>
                                     <option value="2">Venda de Mercadorias</option>
@@ -135,11 +182,11 @@ if(!$_SESSION['user']) {
                         
                     <div class="opcao">
                         <div>
-                            <button formAction="EntradaManual.php">Novo Produto</button>
+                            <button type="button" onclick="location.href='EntradaManual.php'">Novo Produto</button>
                         </div>
                         <div>
                             <button type="submit">Salvar</button>
-                            <button formAction="../../index.php">Cancelar</button>
+                            <button type="button" onclick="location.href='../../index.php'">Cancelar</button>
                         </div>
                     </div>
                 </form>

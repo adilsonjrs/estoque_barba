@@ -1,8 +1,15 @@
 <?php
 //verifica se existe uma sessão, caso não tenha, redireciona para o login.php
-session_start();
-if(!$_SESSION['user']) {
-    header('Location: login.php');
+include 'db/conexao_db.php';
+include 'db/security.php';
+
+// Set security headers
+setSecurityHeaders();
+
+// Check if user session is valid
+if(!isValidSession()) {
+    session_destroy();
+    secureRedirect('login.php?error=session_expired');
 }
 
 include 'db/select_db.php';

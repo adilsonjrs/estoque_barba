@@ -1,0 +1,40 @@
+# Environment files
+.env
+.env.local
+.env.production
+.env.staging
+
+# Logs
+*.log
+logs/
+error.log
+access.log
+
+# Cache
+cache/
+tmp/
+temp/
+
+# IDE files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.sql.gz
+
+# Upload directories (if they contain sensitive files)
+uploads/private/
+documents/
+
+# Configuration files with sensitive data
+config/database.php
+config/secrets.php
